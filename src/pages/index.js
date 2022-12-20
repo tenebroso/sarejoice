@@ -1,128 +1,254 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from 'react';
 import { StaticImage } from "gatsby-plugin-image"
+import Layout from '../components/layout';
+import Header from '../components/Header';
+import About from '../components/About';
+// import Plus from '../components/Plus';
+import poster from "../images/poster.jpg";
+import cover from "../images/cover.jpg";
+// import { getIsThisHour, getIsThisAfter } from '../components/Schedule';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+// styles
+const pageStyles = {
+  color: "#232129",
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  textAlign: "center",
+  backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 95%) 0%, rgb(42 11 11 / 95%) 100%), url(${cover})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+}
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+const posterStyle = {
+  maxHeight: 'calc(100vh - 40px)',
+  width: 'auto',
+  margin: '0 auto',
+  padding: '20px 0',
+  display: 'block',
+}
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+// const today = new Date();
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+// const addAttr = (dates = []) => {
+//   if (!dates.length) {
+//     return false;
+//   }
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+//   return dates.some((date) => (getIsThisHour(date) && !getIsThisAfter(date, today)));
+// }
 
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+// const dateMap = {
+//   friday: 'Friday, June 10th',
+//   saturday: 'Saturday, June 11th',
+//   sunday: 'Sunday, June 12th',
+// }
+
+
+// markup
+const IndexPage = () => {
+  // const [activeDay, setActiveDay] = useState({
+  //   date: 'friday',
+  //   name: 'Friday, June 10th'
+  // });
+  // const handleDayClick = (event) => {
+  //   event &&
+  //   event.target &&
+  //   event.target.dataset &&
+  //   event.target.dataset.name &&
+  //   setActiveDay({
+  //     date: event.target.dataset.name,
+  //     name: dateMap[event.target.dataset.name]
+  //   });
+  // }
+  return (
+    <Layout>
+      <Header>
+      <StaticImage src="../images/header-poster.jpg" alt="Commissioning 2023" />
+      </Header>
+      <section className="about-section" id="about">
+        <div className="container flex wrap">
+          <h2 className="about-heading">Rejoice – Commissioning Weekend 2023</h2>
+          <div className="about-poster">
+            <img
+              style={posterStyle}
+              alt="Rejoice 2023 | Commissioning &amp; Ordination"
+              src={poster}
+            />
+          </div>
+          <div className="about-copy">
+            <About />
+          </div>
+        </div>
+      </section>
+      {/* <section className="specialGuests-section" id="guests">
+        <div className="container flex wrap">
+          <h2 className="specialGuests-heading">Special Guests</h2>
+          <div className="specialGuests-bio">
+
+          <h3 className="specialGuests-names">The Chief of the Staff (Commissioner Lyndon Buckingham) and Commissioner Bronwyn Buckingham</h3>
+          <p>Commissioners Bronwyn and Lyndon Buckingham, originally from the New Zealand, Fiji, Tonga and Samoa Territory, are passionate representatives of The Salvation Army. They have served as officers since they were commissioned in 1990 as members of the Ambassadors for Christ Session. Commissioner Lyndon assumed his current appointment as The Chief of the Staff on 3 August 2018 and Commissioner Bronwyn as the World Secretary for Spiritual Life Development on 1 January 2021, having previously served as the World Secretary for Women&rsquo;s Ministries.</p>
+          <p>Over the years of their officership they have served in corps appointments in New Zealand and Canada, as Territorial Youth and Candidates Secretaries, Divisional Leaders and Territorial Programme Secretaries.</p>
+          <p>On 1 February 2013 the Buckinghams were appointed to the Singapore, Malaysia and Myanmar Territory, firstly as Chief Secretary and Territorial Secretary for Women's Ministries, before assuming territorial leadership in June 2013. On 1 January 2018 they were appointed to lead the United Kingdom Territory with the Republic of Ireland, Commissioner Lyndon Buckingham as Territorial Commander and Commissioner Bronwyn Buckingham as Territorial Leader for Leader Development.</p>
+          <p>Bronwyn and Lyndon are parents to Daniel and Emma, and their lovely daughter-in-law, Juanita. Daniel and Juanita are Corps Officers and Emma holds a Social Ministry appointment, all in New Zealand. They are proud grandparents to Israel and Tobias. They are continually blessed, encouraged and challenged by the desire of their adult children to serve God in their generation.</p>
+          <p>In each of their appointments the Buckinghams have displayed a desire to see the great news of the gospel shared.</p>
+          <p>Bronwyn is inspired by the belief that God has a new truth to reveal to her daily and compelled by the promise that He is continuing to grow and stretch her (Philippians 1:6). She desires to be the woman God is calling her to be and is passionate to be part of an Army where the next generation will choose to embrace their leadership calling.</p>
+          <p>Lyndon is passionate about finding ways for The Salvation Army to be more effective in fulfilling its mission. He is determined to be faithful to the covenants he has made, and is motivated by verses from Paul&rsquo;s letter to the Colossians: &lsquo;Whatever you do, work at it with all your heart, as working for the Lord, not for men&rsquo; (Colossians 3:23)</p>
+          <p>Both are intent on enjoying life, endeavouring to stay fit by walking and jogging. They enjoy reading, watching good movies and are avid supporters of New Zealand&rsquo;s &lsquo;All Blacks&rsquo; rugby team!</p>
+          </div>
+          <StaticImage src="../images/guests.jpg" alt="Rejoice | Commissioning 2023" />
+        </div>
+      </section> */}
+      {/* <section className="schedule-section" id="schedule">
+        <ul className="schedule-key" onClick={handleDayClick}>
+          <li data-name="friday">Friday</li>
+          <li data-name="saturday">Saturday</li>
+          <li data-name="sunday">Sunday</li>
+        </ul>
+      <ul className="schedule">
+        <h3>{activeDay.name}</h3>
+        {schedule[activeDay.date] && schedule[activeDay.date].length && schedule[activeDay.date].map((item, idx) => {
+          return (
+            <li key={idx} data-active={addAttr(item.dates)}>
+              <span className="time">{item.time}</span>
+              <span className="title">{item.title}</span>
+              <span className="location">{item.location}</span>
+              {item.notes && <span className="notes" dangerouslySetInnerHTML={{ __html: item.notes }} />}
+            </li>
+          )
+        })}
+      </ul>
+
+        <div className="container">
+          <p>
+            + By Invitation Only | * Delegate Credential/Ticket | **Available with Pre-Registration Only<br />
+              Spanish, Laotian and Korean Translations will be provided for General Sessions<br />
+              Transmitters will be distributed at the Miller High Life Theatre in the Box Office Lobby<br />
+              As of April 1, 2023 - Schedule is Subject to Change
+          </p>
+        </div>
+      </section> */}
+      {/* <section className="hotel-section" id="hotels">
+        <div className="container">
+          <h2 className="hotel-heading">Hotels</h2> */}
+          {/* <div className="hotel flex">
+            <div className="hotel-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.009245121944!2d-87.91729708473113!3d43.04123697914698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880519fde39f20c3%3A0x4664baf352c61ec2!2s333%20W%20Kilbourn%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645577245168!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+              <p className="hotel-address"><strong>Hyatt Regency Milwaukee</strong><br />333 W. Kilbourn Ave.<br />Milwaukee, WI 53203<br />414-276-1234</p>
+            </div>
+            <div className="hotel-details">
+              <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm">Hyatt Regency Milwaukee - Main Commissioning Hotel</a></h3>
+              <ul className="hotel-details-list">
+                <li><strong>Rates:</strong><br /> $159.00 per night plus 15.5% tax ($183.65 per night)</li>
+                <li><strong>Reservations:</strong><br /> Block is available to book until May 10, 2023 <a href="https://www.hyatt.com/en-US/group-booking/MKERM/G-SACB" target="_blank">Book Reservation</a></li>
+                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
+                <li><strong>Self-Parking:</strong><br />Hyatt Regency Milwaukee Preferred Parking location: 747 North Old World Third Street, Milwaukee, WI 53203<br />Guests can access the parking garage from the Skybridge on the 2nd Floor of the Hotel</li>
+                <li><strong>Overnight Parking:</strong><br /> $20</li>
+                <li><strong>Valet Parking:</strong><br /> $31.00 Overnight Parking with in and out access</li>
+                <li><strong>Pet Policy:</strong><br />
+                  Pets are allowed - $40.00 per night Non-Refundable Deposit<br />
+                  Maximum Weight: 150 lbs. (for 1 single dog or 75 lbs. for 2 smaller dogs)<br />
+                  Service Animals ARE allowed
+                </li>
+              </ul>
+            </div>
+          </div> */}
+
+          {/* <div className="hotel flex">
+            <div className="hotel-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.1400338292706!2d-87.92042338473134!3d43.038485079147165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805199e0d5858a7%3A0x154ce7c19482c95a!2s509%20W%20Wisconsin%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645578587763!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+              <p className="hotel-address"><strong>Hilton Milwaukee City Center Hotel</strong><br />509 W. Wisconsin Ave.<br /> Milwaukee, WI 53203</p>
+            </div>
+            <div className="hotel-details">
+              <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkemhhf-hilton-milwaukee-city-center/">Hilton Milwaukee City Center Hotel</a></h3>
+              <ul className="hotel-details-list">
+                <li><strong>Rates:</strong><br /> $152.00 per night plus 15.5% tax ($175.56 per night)</li>
+                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 20, 2023 <a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-10&departuredate=2023-06-12&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Book Reservation</a></li>
+                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
+                <li><strong>Self-Parking:</strong><br /> DISCOUNTED RATE of $12.00 Overnight Parking per day with in and out access</li>
+                <li><strong>Pet Policy:</strong><br />
+                Pets are allowed - $50.00 Non-Refundable Deposit<br />
+                Maximum Weight: 75 lbs.<br />
+                Service Animals ARE allowed
+                </li>
+              </ul>
+            </div>
+          </div> */}
+
+          {/* <div className="hotel flex">
+            <div className="hotel-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.1480228484083!2d-87.92161108473125!3d43.03831697914711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805199dc2abf0b9%3A0xfbda3ab46b835bd7!2s611%20W%20Wisconsin%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645747283989!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+              <p className="hotel-address"><strong>DoubleTree by Hilton Milwaukee Downtown</strong><br />**LAST DAY TO MAKE RESERVATIONS IS THIS BLOCK IS MAY 10, 2023**<br />611 W. Wisconsin Ave.<br />Milwaukee, WI 53203<br />414-727-2274</p>
+            </div>
+            <div className="hotel-details">
+              <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkeccdt-doubletree-milwaukee-downtown/?SEO_id=BING-DT-MKECCDT&y_source=1_MTM3MjU5MC00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D">DoubleTree by Hilton Milwaukee Downtown</a></h3>
+              <ul className="hotel-details-list">
+                <li><strong>Rates:</strong><br /> $169.00 per night plus 15.1% tax ($194.52 per night)</li>
+                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 10, 2023 <a href="https://www.hilton.com/en/attend-my-event/mkeccdt-sal-7c7db3b8-7121-4693-9519-193731d2f054/" target="_blank">Book Reservation</a></li>
+                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
+                <li><strong>Overnight Parking:</strong><br />$23.00 Overnight Parking per day with in and out access</li>
+                <li><strong>Pet Policy:</strong><br />
+                   Not allowed<br />
+                  Service Animals ARE allowed
+                </li>
+              </ul>
+            </div>
+          </div> */}
+
+          {/* <div className="hotel flex">
+            <div className="hotel-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.781371828172!2d-87.923545684731!3d43.04603127914675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88051970e2f49e9d%3A0x6cc095058809fec0!2s800%20W%20Juneau%20Ave%2C%20Milwaukee%2C%20WI%2053233!5e0!3m2!1sen!2sus!4v1645747773226!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+              <p className="hotel-address"><strong>Hyatt Place Milwaukee Downtown</strong><br />**LAST DAY TO MAKE RESERVATIONS IS THIS BLOCK IS MAY 6, 2023**<br />
+              800 W. Juneau Ave.<br />Milwaukee, WI 53233<br />
+              414-808-3880</p>
+            </div>
+            <div className="hotel-details">
+              <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd">Hyatt Place Milwaukee Downtown</a></h3>
+              <ul className="hotel-details-list">
+                <li><strong>Rates:</strong><br /> $149.00 per night plus 15.5% tax ($172.10 per night)</li>
+                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 6, 2023 <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-SALV" target="_blank">Book Reservation</a></li>
+                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
+                <li><strong>Overnight Parking:</strong><br />$20.00 Overnight Parking plus tax per day with in and out access<br />$32.00 Valet Parking plus tax per day with in and out access</li>
+                <li><strong>Pet Policy:</strong><br />
+                Pets are allowed – Call for fee<br />
+Service Animals ARE allowed at no charge
+                </li>
+              </ul>
+            </div>
+          </div> */}
+
+          {/* <p>Parking Fees and Wisconsin State Taxes are Subject to Change</p> */}
+        {/* </div>
+      </section> */}
+      <footer className="footer">
+        <div className="container">
+            <div id="df-footer-wrapper" className="df-footer-light lazy-wrapper full no-padding">
+            <div className="df-container-footer df-container-fluid">
+            <div>
+              <div className="df-footer-top">
+                <div className="col-lg-12 df-footer-2-inner">
+                  <span className="df-footer-logo">
+                    <img alt="Get Connected" data-src="https://salarmycentral.org/wp-content/uploads/shield.png" className="center-block df-footer-logo-img lazyloaded" src="https://salarmycentral.org/wp-content/uploads/shield.png" loading="lazy" /><noscript><img src="https://salarmycentral.org/wp-content/uploads/shield.png" className="center-block df-footer-logo-img" alt="Get Connected" /></noscript>
+                  </span>
+                  <div className="df-footer-description">
+                    <p><strong>The Salvation Army Mission Statement</strong></p>
+
+                    <p>The Salvation Army, an international movement, is an evangelical part of the universal Christian Church. Its message is based on the Bible. Its ministry is motivated by the love of God. Its mission is to preach the gospel of Jesus Christ and to meet human needs in His name without discrimination.</p>
+
+                    <p>The Salvation Army Central Territory Headquarters<br />
+                    Serving communities in Michigan, Wisconsin, Minnesota, North &amp; South Dakota, Nebraska, Kansas, Missouri, Illinois, Iowa and Indiana<br />
+                    5550 Prairie Stone Parkway, Hoffman Estates, IL 60192 | 1-800-SAL-ARMY | Privacy Policy | © The Salvation Army Central Territory<br />
+                    <a href="https://easternusa.salvationarmy.org/">Eastern Territory</a> | <a href="https://salvationarmysouth.org/">Southern Territory</a> | <a href="https://westernusa.salvationarmy.org/">Western Territory</a> | <a href="https://www.salvationarmy.org/ihq/">International Headquarters</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="df-container-subfooter df-container-fluid">
+          </div>
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+        </div>
+      </footer>
+    </Layout>
+  )
+}
 
 export default IndexPage
