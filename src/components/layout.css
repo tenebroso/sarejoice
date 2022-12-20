@@ -186,10 +186,10 @@ strong {
   bottom: 0;
 }
 
-.footer,
+/* .footer,
 .schedule li {
   background-image: url(../images/bg-image.png);
-}
+} */
 
 .footer {
   background: #2a313f;

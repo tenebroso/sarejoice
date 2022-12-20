@@ -5,19 +5,9 @@ import Header from '../components/Header';
 import About from '../components/About';
 // import Plus from '../components/Plus';
 import poster from "../images/poster.jpg";
-import cover from "../images/cover.jpg";
 // import { getIsThisHour, getIsThisAfter } from '../components/Schedule';
 
 // styles
-const pageStyles = {
-  color: "#232129",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  textAlign: "center",
-  backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 95%) 0%, rgb(42 11 11 / 95%) 100%), url(${cover})`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-}
-
 const posterStyle = {
   maxHeight: 'calc(100vh - 40px)',
   width: 'auto',
