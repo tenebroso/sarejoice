@@ -10,6 +10,7 @@ export default function About(){
 <p>Friday Night: &nbsp;We will <strong>REJOICE</strong> in the City</p>
 <p>Saturday Morning: We will <strong>REJOICE</strong> across all Cultures</p>
 <p>Saturday Evening: &nbsp;We will <strong>REJOICE</strong> with Creative Arts</p>
+<p>On Sunday we will witness the sacred Ordination and Commissioning of the Reflectors of Holiness Session as the Cadets are ordained as ministers and commissioned to do the work of The Salvation Army with the new rank of Lieutenant. The weekend will conclude as we all witness the Lieutenants being given their first appointment and sent out to be Officers in His great Army.</p>
     </>
   )
 }
