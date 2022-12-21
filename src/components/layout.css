@@ -95,6 +95,11 @@ strong {
   display: block;
   font-size: 1.5rem;
   padding: 0 10px;
+
+  font-size: 1rem;
+  padding: 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 #mainNav a img {
