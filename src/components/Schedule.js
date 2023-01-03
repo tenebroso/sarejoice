@@ -11,37 +11,29 @@ export function getIsThisAfter(date, today){
 export const schedule = {
   friday: [
     {
-      time: '9:30 A.M. - 11:00 A.M.',
+      time: '9:30 A.M.',
       title: 'Commencement Ceremony',
       location: 'Oak Creek Corps, Oak Creek, WI',
       notes: '',
-      dates: [
-        new Date(2023, 5, 10, 9),
-        new Date(2023, 5, 10, 10),
-      ]
+      // dates: [
+      //   new Date(2023, 5, 9, 9),
+      //   new Date(2023, 5, 9, 10),
+      // ]
     },
     {
       time: '12:00 P.M. - 2:00 P.M.',
       title: `Retired Officers' Luncheon+`,
-      location: 'Hyatt Regency Milwaukee Hotel, Lake Shore Ballroom, 1st Floor',
+      location: 'Hyatt Regency Milwaukee Hotel, Vue North Ballroom, 21st Floor',
       notes: '',
-      dates: [
-        new Date(2023, 5, 10, 12),
-        new Date(2023, 5, 10, 13)
-      ]
     },
     {
       time: '1:00 P.M. - 6:30 P.M.',
       title: 'Trade Central and Museum Exhibits Open to the Public',
-      location: 'Hyatt Regency Milwaukee Hotel, Executive Ballroom, Atrium, Crystal Room and Milwaukee Rooms, 2nd Floor',
+      location: 'Wisconsin Center, Ballrooms A &amp; B, 1st Floor',
       notes: '',
-      dates: [
-        new Date(2023, 5, 10, 13),
-        new Date(2023, 5, 10, 18, 30),
-      ]
     },
     {
-      time: '2:00 P.M. - 7:30 P.M.',
+      time: '2:00 P.M.',
       title: 'Onsite Registration and Packet Distribution for all Delegates',
       location: 'Miller High Life Theatre, Box Office Lobby',
       notes: '',
@@ -55,13 +47,13 @@ export const schedule = {
     {
       time: '4:00 P.M. - 5:00 P.M.',
       title: 'Candidates Meet and Greet+',
-      location: 'Hyatt Regency Milwaukee Hotel, Vue North Ballroom, 21st Floor',
+      location: 'Hyatt Regency Milwaukee Hotel, Vue East Ballroom, 21st Floor',
       notes: '',
     },
     {
       time: '5:00 P.M. - 7:00 P.M.',
       title: 'Long Service Recognition Dinner+',
-      location: 'Hyatt Regency Milwaukee Hotel, Lake Shore Ballroom, 1st Floor',
+      location: 'Hyatt Regency Milwaukee Hotel, Vue North Ballroom, 21st Floor',
       notes: '',
     },
     {
@@ -71,13 +63,13 @@ export const schedule = {
       notes: `
       (ALL Adults authorized to drop off and pick up Children MUST come for a photo - DROP OFF TIME ONLY)<br />
       Children, Ages 0-23 months, Kilbourn Hall East Rotunda, 1st Floor<br />
-      Children, Ages 2 -5 years, Kilbourn Hall, 1st Floor**<br />
+      Children, Ages 2-5 years, Kilbourn Hall, 1st Floor**<br />
       Children, Ages 6-11 years, Plankinton Hall, 2nd Floor**
       `,
     },
     {
       time: '7:30 P.M. - 9:30 P.M.',
-      title: 'Opening Session - with Special Guests: The Chief of the Staff, Commissioner Lyndon Buckingham and Commissioner Bronwyn Buckingham, World Secretary for Spiritual Life Development',
+      title: 'Opening Session - We will Rejoice in the City',
       location: 'Miller High Life Theatre',
       notes: '',
     },
@@ -98,11 +90,11 @@ export const schedule = {
     {
       time: '8:30 A.M. - 9:30 A.M.',
       title: 'CFOT Summer Session Breakfast+',
-      location: 'Hyatt Regency Milwaukee Hotel, Lake Shore Ballroom, 1st Floor',
+      location: 'Hyatt Regency Milwaukee Hotel, Vue North Ballroom, 21st Floor',
       notes: '',
     },
     {
-      time: '9:00 A.M. - 12:00 P.M.',
+      time: '9:00 A.M.',
       title: 'Onsite Registration and Packet Distribution for all Delegates',
       location: 'Miller High Life Theatre, Box Office Lobby',
       notes: '',
@@ -114,21 +106,21 @@ export const schedule = {
       notes: 'Lunch will not be provided',
     },
     {
-      time: '10:00 A.M. - 11:30 A.M.',
-      title: 'Morning Session - with Special Guests: The Chief of the Staff, Commissioner Lyndon Buckingham and Commissioner Bronwyn Buckingham, World Secretary for Spiritual Life Development',
+      time: '10:00 A.M.',
+      title: 'Morning Session - We will Rejoice across all Cultures',
       location: 'Miller High Life Theatre',
       notes: '',
     },
     {
       time: '12:30 P.M. - 5:30 P.M.',
       title: 'Trade Central and Museum Exhibits Open to the Public',
-      location: 'Hyatt Regency Milwaukee Hotel, Executive Ballroom, Atrium, Crystal Room and Milwaukee Rooms, 2nd Floor',
+      location: 'Wisconsin Center, Ballrooms A & B, 1st Floor',
       notes: '',
     },
     {
       time: '4:15 P.M. - 6:30 P.M.',
       title: 'Fellowship of the Silver Star Dinner +',
-      location: 'Hyatt Regency Milwaukee Hotel, Regency Ballroom, Rooms AB, 2nd Floor',
+      location: 'Hyatt Regency Milwaukee Hotel, Regency Ballroom, Rooms CD, 2nd Floor',
       notes: '',
     },
     {
@@ -144,14 +136,8 @@ export const schedule = {
       notes: '',
     },
     {
-      time: '6:45 P.M - 7:15 P.M.',
-      title: 'Evening Concert: Central Territorial Staff Songsters Live!',
-      location: 'Grand Rotunda, Miller High Life Theatre',
-      notes: '',
-    },
-    {
-      time: '7:30 P.M. - 9:30 P.M.',
-      title: 'Evening Session - with Special Guests: The Chief of the Staff, Commissioner Lyndon Buckingham and Commissioner Bronwyn Buckingham, World Secretary for Spiritual Life Development',
+      time: '7:30 P.M.',
+      title: 'Evening Session - We will Rejoice with Creative Arts',
       location: 'Miller High Life Theatre',
       notes: '',
     }
@@ -171,7 +157,7 @@ export const schedule = {
     },
     {
       time: '9:00 A.M. - 11:30 A.M.',
-      title: 'Commissioning and Ordination of the Messengers of Reconciliation Session',
+      title: 'Commissioning and Ordination of the Reflectors of Holiness Session',
       location: 'Miller High Life Theatre',
       notes: '',
     },
@@ -183,7 +169,7 @@ export const schedule = {
     },
     {
       time: '1:00 P.M. - 3:00 P.M.',
-      title: 'Parade of Flags followed by the Service of Appointments for the Messengers of Reconciliation Session*',
+      title: 'Parade of Flags followed by the Service of Appointments for the Reflectors of Holiness Session',
       location: 'Miller High Life Theatre',
       notes: '',
     },

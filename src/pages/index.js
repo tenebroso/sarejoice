@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout';
 import Header from '../components/Header';
 import About from '../components/About';
 // import Plus from '../components/Plus';
 import poster from "../images/poster.jpg";
-// import { getIsThisHour, getIsThisAfter } from '../components/Schedule';
+
+import { schedule, getIsThisHour, getIsThisAfter } from '../components/Schedule';
 
 // styles
 const posterStyle = {
@@ -16,39 +17,39 @@ const posterStyle = {
   display: 'block',
 }
 
-// const today = new Date();
+const today = new Date();
 
-// const addAttr = (dates = []) => {
-//   if (!dates.length) {
-//     return false;
-//   }
+const addAttr = (dates = []) => {
+  if (!dates.length) {
+    return false;
+  }
 
-//   return dates.some((date) => (getIsThisHour(date) && !getIsThisAfter(date, today)));
-// }
+  return dates.some((date) => (getIsThisHour(date) && !getIsThisAfter(date, today)));
+}
 
-// const dateMap = {
-//   friday: 'Friday, June 10th',
-//   saturday: 'Saturday, June 11th',
-//   sunday: 'Sunday, June 12th',
-// }
+const dateMap = {
+  friday: 'Friday, June 9th',
+  saturday: 'Saturday, June 10th',
+  sunday: 'Sunday, June 11th',
+}
 
 
 // markup
 const IndexPage = () => {
-  // const [activeDay, setActiveDay] = useState({
-  //   date: 'friday',
-  //   name: 'Friday, June 10th'
-  // });
-  // const handleDayClick = (event) => {
-  //   event &&
-  //   event.target &&
-  //   event.target.dataset &&
-  //   event.target.dataset.name &&
-  //   setActiveDay({
-  //     date: event.target.dataset.name,
-  //     name: dateMap[event.target.dataset.name]
-  //   });
-  // }
+  const [activeDay, setActiveDay] = useState({
+    date: 'friday',
+    name: 'Friday, June 9th'
+  });
+  const handleDayClick = (event) => {
+    event &&
+    event.target &&
+    event.target.dataset &&
+    event.target.dataset.name &&
+    setActiveDay({
+      date: event.target.dataset.name,
+      name: dateMap[event.target.dataset.name]
+    });
+  }
   return (
     <Layout>
       <Header>
@@ -87,7 +88,7 @@ const IndexPage = () => {
           <StaticImage src="../images/guests.jpg" alt="Rejoice | Commissioning 2023" />
         </div>
       </section> */}
-      {/* <section className="schedule-section" id="schedule">
+      <section className="schedule-section" id="schedule">
         <ul className="schedule-key" onClick={handleDayClick}>
           <li data-name="friday">Friday</li>
           <li data-name="saturday">Saturday</li>
@@ -109,13 +110,13 @@ const IndexPage = () => {
 
         <div className="container">
           <p>
-            + By Invitation Only | * Delegate Credential/Ticket | **Available with Pre-Registration Only<br />
+            + By Invitation Only | **Available with Pre-Registration Only<br />
               Spanish, Laotian and Korean Translations will be provided for General Sessions<br />
               Transmitters will be distributed at the Miller High Life Theatre in the Box Office Lobby<br />
-              As of April 1, 2023 - Schedule is Subject to Change
+              <em>As of December 16, 2022 – Schedule is Subject to Change</em>
           </p>
         </div>
-      </section> */}
+      </section>
       {/* <section className="hotel-section" id="hotels">
         <div className="container">
           <h2 className="hotel-heading">Hotels</h2> */}
