@@ -56,7 +56,7 @@ export default function Header({
         {isMobile && (
           <div className="header-mobile">
           <a href="/" className="header-logo">
-            <img src="/advance-words.png" alt="Rejoice | Commissioning 2023" />
+          Rejoice | Commissioning 2023
           </a>
           <div className="nav-toggle" onClick={() => setIsNavOpen(!isNavOpen)}>
           ☰
