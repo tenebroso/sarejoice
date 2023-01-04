@@ -67,10 +67,11 @@ export default function Header({
           <ul style={isMobile ? navListMobile : navList}>
             <li className="nav-item"><a className="nav-link js-scroll-trigger redCap" href="https://events.uscthq.org/EventHub.aspx?ID=32" target="_blank" rel="noopener">Register</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/#about">About</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/#hotels">Hotels</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/#schedule">Schedule</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger" href="http://www.salvationarmymedia.org/commissioning2022.html" target="_blank" rel="noopener">2022 Videos</a></li>
             {/* <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/#guests">Special Guests</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/#hotels">Hotels</a></li>
+            
             <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/MilwaukeeDining.pdf" target="_blank">Restaurants (PDF)</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger" href="/5k">5k</a></li> */}
             {/* <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#workshops">Workshops</a></li>

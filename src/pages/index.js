@@ -117,44 +117,44 @@ const IndexPage = () => {
           </p>
         </div>
       </section>
-      {/* <section className="hotel-section" id="hotels">
+      <section className="hotel-section" id="hotels">
         <div className="container">
-          <h2 className="hotel-heading">Hotels</h2> */}
-          {/* <div className="hotel flex">
+          <h2 className="hotel-heading">Hotels</h2>
+          <div className="hotel flex">
             <div className="hotel-map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.009245121944!2d-87.91729708473113!3d43.04123697914698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880519fde39f20c3%3A0x4664baf352c61ec2!2s333%20W%20Kilbourn%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645577245168!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
               <p className="hotel-address"><strong>Hyatt Regency Milwaukee</strong><br />333 W. Kilbourn Ave.<br />Milwaukee, WI 53203<br />414-276-1234</p>
             </div>
             <div className="hotel-details">
-              <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm">Hyatt Regency Milwaukee - Main Commissioning Hotel</a></h3>
+              <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm">Hyatt Regency Milwaukee</a></h3>
               <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $159.00 per night plus 15.5% tax ($183.65 per night)</li>
-                <li><strong>Reservations:</strong><br /> Block is available to book until May 10, 2023 <a href="https://www.hyatt.com/en-US/group-booking/MKERM/G-SACB" target="_blank">Book Reservation</a></li>
+                <li><strong>Rates:</strong><br /> $182.00 per night plus 15.5% tax ($210.21 per night)</li>
+                <li><strong>Reservations:</strong><br /> Hotel Room Block will be available to book in Spring 2023</li>
                 <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
-                <li><strong>Self-Parking:</strong><br />Hyatt Regency Milwaukee Preferred Parking location: 747 North Old World Third Street, Milwaukee, WI 53203<br />Guests can access the parking garage from the Skybridge on the 2nd Floor of the Hotel</li>
-                <li><strong>Overnight Parking:</strong><br /> $20</li>
+                <li><strong>Self-Parking:</strong><br />310 Parking Structure (Hyatt Regency's Preferred Parking Garage)<br />
+              747 North Old World Third Street, Milwaukee, WI, 53203</li>
                 <li><strong>Valet Parking:</strong><br /> $31.00 Overnight Parking with in and out access</li>
-                <li><strong>Pet Policy:</strong><br />
-                  Pets are allowed - $40.00 per night Non-Refundable Deposit<br />
-                  Maximum Weight: 150 lbs. (for 1 single dog or 75 lbs. for 2 smaller dogs)<br />
-                  Service Animals ARE allowed
+                <li><strong>Hotel Policy:</strong><br />
+                Pets are allowed - $40.00 per night Non-Refundable Deposit<br />
+                Maximum Weight: 150 lbs. (for 1 single dog or 75 lbs. for 2 smaller dogs)<br />
+                Service Animals ARE allowed
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className="hotel flex">
+          <div className="hotel flex">
             <div className="hotel-map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.1400338292706!2d-87.92042338473134!3d43.038485079147165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805199e0d5858a7%3A0x154ce7c19482c95a!2s509%20W%20Wisconsin%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645578587763!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-              <p className="hotel-address"><strong>Hilton Milwaukee City Center Hotel</strong><br />509 W. Wisconsin Ave.<br /> Milwaukee, WI 53203</p>
+              <p className="hotel-address"><strong>Hilton Milwaukee City Center Hotel</strong><br />**LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 18, 2023**<br />509 W. Wisconsin Ave.<br /> Milwaukee, WI 53203<br />414-271-7250</p>
             </div>
             <div className="hotel-details">
-              <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkemhhf-hilton-milwaukee-city-center/">Hilton Milwaukee City Center Hotel</a></h3>
+              <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkemhhf-hilton-milwaukee-city-center/?SEO_id=BING-HI-MKEMHHF&y_source=1_MTIyMDkxOS00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D">Hilton Milwaukee City Center Hotel</a></h3>
               <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $152.00 per night plus 15.5% tax ($175.56 per night)</li>
-                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 20, 2023 <a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-10&departuredate=2023-06-12&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Book Reservation</a></li>
+                <li><strong>Rates:</strong><br /> $179.00 per night plus 15.5% tax ($206.75 per night)</li>
+                <li><strong>Reservations:</strong><br /> **LAST DAY TO MAKE RESERVATIONS IS THIS BLOCK IS MAY 18, 2023**<br /><a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-08&departuredate=2023-06-11&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Book Reservation</a></li>
                 <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
-                <li><strong>Self-Parking:</strong><br /> DISCOUNTED RATE of $12.00 Overnight Parking per day with in and out access</li>
+                <li><strong>Self-Parking:</strong><br /> DISCOUNTED RATE of $15.00 Overnight Parking per day with in and out access</li>
                 <li><strong>Pet Policy:</strong><br />
                 Pets are allowed - $50.00 Non-Refundable Deposit<br />
                 Maximum Weight: 75 lbs.<br />
@@ -162,7 +162,7 @@ const IndexPage = () => {
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
 
           {/* <div className="hotel flex">
             <div className="hotel-map">
@@ -184,18 +184,20 @@ const IndexPage = () => {
             </div>
           </div> */}
 
-          {/* <div className="hotel flex">
+          <div className="hotel flex">
             <div className="hotel-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.781371828172!2d-87.923545684731!3d43.04603127914675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88051970e2f49e9d%3A0x6cc095058809fec0!2s800%20W%20Juneau%20Ave%2C%20Milwaukee%2C%20WI%2053233!5e0!3m2!1sen!2sus!4v1645747773226!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-              <p className="hotel-address"><strong>Hyatt Place Milwaukee Downtown</strong><br />**LAST DAY TO MAKE RESERVATIONS IS THIS BLOCK IS MAY 6, 2023**<br />
+              <p className="hotel-address"><strong>Hyatt Place Milwaukee Downtown</strong><br />**LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 5, 2023**<br />
               800 W. Juneau Ave.<br />Milwaukee, WI 53233<br />
               414-808-3880</p>
             </div>
             <div className="hotel-details">
               <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd">Hyatt Place Milwaukee Downtown</a></h3>
               <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $149.00 per night plus 15.5% tax ($172.10 per night)</li>
-                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 6, 2023 <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-SALV" target="_blank">Book Reservation</a></li>
+                <li><strong>Rates:</strong><br /> $169.00 per night plus 15.5% tax ($195.20 per night)</li>
+                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 5, 2023 
+                {/* <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-SALV" target="_blank">Book Reservation</a> */}
+                </li>
                 <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
                 <li><strong>Overnight Parking:</strong><br />$20.00 Overnight Parking plus tax per day with in and out access<br />$32.00 Valet Parking plus tax per day with in and out access</li>
                 <li><strong>Pet Policy:</strong><br />
@@ -204,11 +206,11 @@ Service Animals ARE allowed at no charge
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
 
-          {/* <p>Parking Fees and Wisconsin State Taxes are Subject to Change</p> */}
-        {/* </div>
-      </section> */}
+          <p>Parking Fees and Wisconsin State Taxes are Subject to Change</p>
+        </div>
+      </section>
       <footer className="footer">
         <div className="container">
             <div id="df-footer-wrapper" className="df-footer-light lazy-wrapper full no-padding">
