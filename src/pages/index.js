@@ -61,7 +61,7 @@ const IndexPage = () => {
           <div className="about-poster">
             <img
               style={posterStyle}
-              alt="Rejoice 2023 | Commissioning &amp; Ordination"
+              alt="Rejoice 2023 | Commissioning & Ordination"
               src={poster}
             />
           </div>
@@ -152,7 +152,7 @@ const IndexPage = () => {
               <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkemhhf-hilton-milwaukee-city-center/?SEO_id=BING-HI-MKEMHHF&y_source=1_MTIyMDkxOS00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D">Hilton Milwaukee City Center Hotel</a></h3>
               <ul className="hotel-details-list">
                 <li><strong>Rates:</strong><br /> $179.00 per night plus 15.5% tax ($206.75 per night)</li>
-                <li><strong>Reservations:</strong><br /> **LAST DAY TO MAKE RESERVATIONS IS THIS BLOCK IS MAY 18, 2023**<br /><a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-08&departuredate=2023-06-11&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Book Reservation</a></li>
+                <li><strong>Reservations:</strong><br /> **LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 18, 2023**<br /><a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-08&departuredate=2023-06-11&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Book Reservation</a></li>
                 <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
                 <li><strong>Self-Parking:</strong><br /> DISCOUNTED RATE of $15.00 Overnight Parking per day with in and out access</li>
                 <li><strong>Pet Policy:</strong><br />

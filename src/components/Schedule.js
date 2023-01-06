@@ -29,7 +29,7 @@ export const schedule = {
     {
       time: '1:00 P.M. - 6:30 P.M.',
       title: 'Trade Central and Museum Exhibits Open to the Public',
-      location: 'Wisconsin Center, Ballrooms A &amp; B, 1st Floor',
+      location: 'Wisconsin Center, Ballrooms A & B, 1st Floor',
       notes: '',
     },
     {
@@ -75,7 +75,7 @@ export const schedule = {
     },
     {
       time: '10:00 P.M. - 11:30 P.M.',
-      title: 'Teen & Young Adult Afterglow (Ages 13-29 years old) **',
+      title: 'Teen & Young Adult Afterglow (Ages 13-29 years old)**',
       location: 'Miller High Life Theatre, Plankinton Hall, 2nd Floor',
       notes: '',
     },
@@ -101,7 +101,7 @@ export const schedule = {
     },
     {
       time: '9:15 A.M. - 11:45 A.M.',
-      title: 'Child Care for Pre-Registered Children (ages 0-11 years)**Until End of Meeting',
+      title: 'Child Care for Pre-Registered Children (ages 0-11 years)** Until End of Meeting',
       location: 'Miller High Life Theatre - Kilbourn Hall East Rotunda / Kilbourn Hall / Plankinton Hall',
       notes: 'Lunch will not be provided',
     },
@@ -119,7 +119,7 @@ export const schedule = {
     },
     {
       time: '4:15 P.M. - 6:30 P.M.',
-      title: 'Fellowship of the Silver Star Dinner +',
+      title: 'Fellowship of the Silver Star Dinner+',
       location: 'Hyatt Regency Milwaukee Hotel, Regency Ballroom, Rooms CD, 2nd Floor',
       notes: '',
     },
