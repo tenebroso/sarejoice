@@ -174,9 +174,6 @@ const IndexPage = () => {
                   <br /> Hotel Room Block will be available to book in Spring
                   2023
                   <br />
-                  <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-FTSA">
-                    Book Reservation
-                  </a>
                 </li>
                 <li>
                   <strong>Cancellation Policy:</strong>
@@ -334,7 +331,9 @@ const IndexPage = () => {
                 <li>
                   <strong>Reservations:</strong>
                   <br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 5, 2023
-                  {/* <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-SALV" target="_blank">Book Reservation</a> */}
+                  <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-FTSA">
+                    Book Reservation
+                  </a>
                 </li>
                 <li>
                   <strong>Cancellation Policy:</strong>
