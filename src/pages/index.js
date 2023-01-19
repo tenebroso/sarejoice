@@ -1,63 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import Layout from '../components/layout';
-import Header from '../components/Header';
-import About from '../components/About';
+import Layout from "../components/layout"
+import Header from "../components/Header"
+import About from "../components/About"
 // import Plus from '../components/Plus';
-import poster from "../images/poster.jpg";
+import poster from "../images/poster.jpg"
 
-import { schedule, getIsThisHour, getIsThisAfter } from '../components/Schedule';
+import { schedule, getIsThisHour, getIsThisAfter } from "../components/Schedule"
 
 // styles
 const posterStyle = {
-  maxHeight: 'calc(100vh - 40px)',
-  width: 'auto',
-  margin: '0 auto',
-  padding: '20px 0',
-  display: 'block',
+  maxHeight: "calc(100vh - 40px)",
+  width: "auto",
+  margin: "0 auto",
+  padding: "20px 0",
+  display: "block",
 }
 
-const today = new Date();
+const today = new Date()
 
 const addAttr = (dates = []) => {
   if (!dates.length) {
-    return false;
+    return false
   }
 
-  return dates.some((date) => (getIsThisHour(date) && !getIsThisAfter(date, today)));
+  return dates.some(date => getIsThisHour(date) && !getIsThisAfter(date, today))
 }
 
 const dateMap = {
-  friday: 'Friday, June 9th',
-  saturday: 'Saturday, June 10th',
-  sunday: 'Sunday, June 11th',
+  friday: "Friday, June 9th",
+  saturday: "Saturday, June 10th",
+  sunday: "Sunday, June 11th",
 }
-
 
 // markup
 const IndexPage = () => {
   const [activeDay, setActiveDay] = useState({
-    date: 'friday',
-    name: 'Friday, June 9th'
-  });
-  const handleDayClick = (event) => {
+    date: "friday",
+    name: "Friday, June 9th",
+  })
+  const handleDayClick = event => {
     event &&
-    event.target &&
-    event.target.dataset &&
-    event.target.dataset.name &&
-    setActiveDay({
-      date: event.target.dataset.name,
-      name: dateMap[event.target.dataset.name]
-    });
+      event.target &&
+      event.target.dataset &&
+      event.target.dataset.name &&
+      setActiveDay({
+        date: event.target.dataset.name,
+        name: dateMap[event.target.dataset.name],
+      })
   }
   return (
     <Layout>
       <Header>
-      <StaticImage src="../images/header-poster.jpg" alt="Commissioning 2023" />
+        <StaticImage
+          src="../images/header-poster.jpg"
+          alt="Commissioning 2023"
+        />
       </Header>
       <section className="about-section" id="about">
         <div className="container flex wrap">
-          <h2 className="about-heading">Rejoice – Commissioning Weekend 2023</h2>
+          <h2 className="about-heading">
+            Rejoice – Commissioning Weekend 2023
+          </h2>
           <div className="about-poster">
             <img
               style={posterStyle}
@@ -94,26 +98,38 @@ const IndexPage = () => {
           <li data-name="saturday">Saturday</li>
           <li data-name="sunday">Sunday</li>
         </ul>
-      <ul className="schedule">
-        <h3>{activeDay.name}</h3>
-        {schedule[activeDay.date] && schedule[activeDay.date].length && schedule[activeDay.date].map((item, idx) => {
-          return (
-            <li key={idx} data-active={addAttr(item.dates)}>
-              <span className="time">{item.time}</span>
-              <span className="title">{item.title}</span>
-              <span className="location">{item.location}</span>
-              {item.notes && <span className="notes" dangerouslySetInnerHTML={{ __html: item.notes }} />}
-            </li>
-          )
-        })}
-      </ul>
+        <ul className="schedule">
+          <h3>{activeDay.name}</h3>
+          {schedule[activeDay.date] &&
+            schedule[activeDay.date].length &&
+            schedule[activeDay.date].map((item, idx) => {
+              return (
+                <li key={idx} data-active={addAttr(item.dates)}>
+                  <span className="time">{item.time}</span>
+                  <span className="title">{item.title}</span>
+                  <span className="location">{item.location}</span>
+                  {item.notes && (
+                    <span
+                      className="notes"
+                      dangerouslySetInnerHTML={{ __html: item.notes }}
+                    />
+                  )}
+                </li>
+              )
+            })}
+        </ul>
 
         <div className="container">
           <p>
-            + By Invitation Only | **Available with Pre-Registration Only<br />
-              Spanish, Laotian and Korean Translations will be provided for General Sessions<br />
-              Transmitters will be distributed at the Miller High Life Theatre in the Box Office Lobby<br />
-              <em>As of December 16, 2022 – Schedule is Subject to Change</em>
+            + By Invitation Only | **Available with Pre-Registration Only
+            <br />
+            Spanish, Laotian and Korean Translations will be provided for
+            General Sessions
+            <br />
+            Transmitters will be distributed at the Miller High Life Theatre in
+            the Box Office Lobby
+            <br />
+            <em>As of December 16, 2022 – Schedule is Subject to Change</em>
           </p>
         </div>
       </section>
@@ -122,22 +138,71 @@ const IndexPage = () => {
           <h2 className="hotel-heading">Hotels</h2>
           <div className="hotel flex">
             <div className="hotel-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.009245121944!2d-87.91729708473113!3d43.04123697914698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880519fde39f20c3%3A0x4664baf352c61ec2!2s333%20W%20Kilbourn%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645577245168!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-              <p className="hotel-address"><strong>Hyatt Regency Milwaukee</strong><br />333 W. Kilbourn Ave.<br />Milwaukee, WI 53203<br />414-276-1234</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.009245121944!2d-87.91729708473113!3d43.04123697914698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880519fde39f20c3%3A0x4664baf352c61ec2!2s333%20W%20Kilbourn%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645577245168!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+              <p className="hotel-address">
+                <strong>Hyatt Regency Milwaukee</strong>
+                <br />
+                333 W. Kilbourn Ave.
+                <br />
+                Milwaukee, WI 53203
+                <br />
+                414-276-1234
+              </p>
             </div>
             <div className="hotel-details">
-              <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm">Hyatt Regency Milwaukee</a></h3>
+              <h3 className="hotel-name">
+                <a
+                  target="_blank"
+                  href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm"
+                >
+                  Hyatt Regency Milwaukee
+                </a>
+              </h3>
               <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $182.00 per night plus 15.5% tax ($210.21 per night)</li>
-                <li><strong>Reservations:</strong><br /> Hotel Room Block will be available to book in Spring 2023</li>
-                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
-                <li><strong>Self-Parking:</strong><br />310 Parking Structure (Hyatt Regency's Preferred Parking Garage)<br />
-              747 North Old World Third Street, Milwaukee, WI, 53203</li>
-                <li><strong>Valet Parking:</strong><br /> $31.00 Overnight Parking with in and out access</li>
-                <li><strong>Hotel Policy:</strong><br />
-                Pets are allowed - $40.00 per night Non-Refundable Deposit<br />
-                Maximum Weight: 150 lbs. (for 1 single dog or 75 lbs. for 2 smaller dogs)<br />
-                Service Animals ARE allowed
+                <li>
+                  <strong>Rates:</strong>
+                  <br /> $182.00 per night plus 15.5% tax ($210.21 per night)
+                </li>
+                <li>
+                  <strong>Reservations:</strong>
+                  <br /> Hotel Room Block will be available to book in Spring
+                  2023
+                  <br />
+                  <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-FTSA">
+                    Book Reservation
+                  </a>
+                </li>
+                <li>
+                  <strong>Cancellation Policy:</strong>
+                  <br /> 48 Hours / 2 Days Prior to Arrival Date
+                </li>
+                <li>
+                  <strong>Self-Parking:</strong>
+                  <br />
+                  310 Parking Structure (Hyatt Regency's Preferred Parking
+                  Garage)
+                  <br />
+                  747 North Old World Third Street, Milwaukee, WI, 53203
+                </li>
+                <li>
+                  <strong>Valet Parking:</strong>
+                  <br /> $31.00 Overnight Parking with in and out access
+                </li>
+                <li>
+                  <strong>Hotel Policy:</strong>
+                  <br />
+                  Pets are allowed - $40.00 per night Non-Refundable Deposit
+                  <br />
+                  Maximum Weight: 150 lbs. (for 1 single dog or 75 lbs. for 2
+                  smaller dogs)
+                  <br />
+                  Service Animals ARE allowed
                 </li>
               </ul>
             </div>
@@ -145,20 +210,67 @@ const IndexPage = () => {
 
           <div className="hotel flex">
             <div className="hotel-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.1400338292706!2d-87.92042338473134!3d43.038485079147165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805199e0d5858a7%3A0x154ce7c19482c95a!2s509%20W%20Wisconsin%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645578587763!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-              <p className="hotel-address"><strong>Hilton Milwaukee City Center Hotel</strong><br />**LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 18, 2023**<br />509 W. Wisconsin Ave.<br /> Milwaukee, WI 53203<br />414-271-7250</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.1400338292706!2d-87.92042338473134!3d43.038485079147165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805199e0d5858a7%3A0x154ce7c19482c95a!2s509%20W%20Wisconsin%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645578587763!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+              <p className="hotel-address">
+                <strong>Hilton Milwaukee City Center Hotel</strong>
+                <br />
+                **LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 18, 2023**
+                <br />
+                509 W. Wisconsin Ave.
+                <br /> Milwaukee, WI 53203
+                <br />
+                414-271-7250
+              </p>
             </div>
             <div className="hotel-details">
-              <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkemhhf-hilton-milwaukee-city-center/?SEO_id=BING-HI-MKEMHHF&y_source=1_MTIyMDkxOS00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D">Hilton Milwaukee City Center Hotel</a></h3>
+              <h3 className="hotel-name">
+                <a
+                  target="_blank"
+                  href="https://www.hilton.com/en/hotels/mkemhhf-hilton-milwaukee-city-center/?SEO_id=BING-HI-MKEMHHF&y_source=1_MTIyMDkxOS00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
+                >
+                  Hilton Milwaukee City Center Hotel
+                </a>
+              </h3>
               <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $179.00 per night plus 15.5% tax ($206.75 per night)</li>
-                <li><strong>Reservations:</strong><br /> **LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 18, 2023**<br /><a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-08&departuredate=2023-06-11&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Book Reservation</a></li>
-                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
-                <li><strong>Self-Parking:</strong><br /> DISCOUNTED RATE of $15.00 Overnight Parking per day with in and out access</li>
-                <li><strong>Pet Policy:</strong><br />
-                Pets are allowed - $50.00 Non-Refundable Deposit<br />
-                Maximum Weight: 75 lbs.<br />
-                Service Animals ARE allowed
+                <li>
+                  <strong>Rates:</strong>
+                  <br /> $179.00 per night plus 15.5% tax ($206.75 per night)
+                </li>
+                <li>
+                  <strong>Reservations:</strong>
+                  <br /> **LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY
+                  18, 2023**
+                  <br />
+                  <a
+                    href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MKEMHHF&groupCode=SARMY&arrivaldate=2023-06-08&departuredate=2023-06-11&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT"
+                    target="_blank"
+                  >
+                    Book Reservation
+                  </a>
+                </li>
+                <li>
+                  <strong>Cancellation Policy:</strong>
+                  <br /> 48 Hours / 2 Days Prior to Arrival Date
+                </li>
+                <li>
+                  <strong>Self-Parking:</strong>
+                  <br /> DISCOUNTED RATE of $15.00 Overnight Parking per day
+                  with in and out access
+                </li>
+                <li>
+                  <strong>Pet Policy:</strong>
+                  <br />
+                  Pets are allowed - $50.00 Non-Refundable Deposit
+                  <br />
+                  Maximum Weight: 75 lbs.
+                  <br />
+                  Service Animals ARE allowed
                 </li>
               </ul>
             </div>
@@ -186,23 +298,62 @@ const IndexPage = () => {
 
           <div className="hotel flex">
             <div className="hotel-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.781371828172!2d-87.923545684731!3d43.04603127914675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88051970e2f49e9d%3A0x6cc095058809fec0!2s800%20W%20Juneau%20Ave%2C%20Milwaukee%2C%20WI%2053233!5e0!3m2!1sen!2sus!4v1645747773226!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-              <p className="hotel-address"><strong>Hyatt Place Milwaukee Downtown</strong><br />**LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 5, 2023**<br />
-              800 W. Juneau Ave.<br />Milwaukee, WI 53233<br />
-              414-808-3880</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.781371828172!2d-87.923545684731!3d43.04603127914675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88051970e2f49e9d%3A0x6cc095058809fec0!2s800%20W%20Juneau%20Ave%2C%20Milwaukee%2C%20WI%2053233!5e0!3m2!1sen!2sus!4v1645747773226!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+              <p className="hotel-address">
+                <strong>Hyatt Place Milwaukee Downtown</strong>
+                <br />
+                **LAST DAY TO MAKE RESERVATIONS IN THIS BLOCK IS MAY 5, 2023**
+                <br />
+                800 W. Juneau Ave.
+                <br />
+                Milwaukee, WI 53233
+                <br />
+                414-808-3880
+              </p>
             </div>
             <div className="hotel-details">
-              <h3 className="hotel-name"><a target="_blank" href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd">Hyatt Place Milwaukee Downtown</a></h3>
+              <h3 className="hotel-name">
+                <a
+                  target="_blank"
+                  href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd"
+                >
+                  Hyatt Place Milwaukee Downtown
+                </a>
+              </h3>
               <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $169.00 per night plus 15.5% tax ($195.20 per night)</li>
-                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 5, 2023 
-                {/* <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-SALV" target="_blank">Book Reservation</a> */}
+                <li>
+                  <strong>Rates:</strong>
+                  <br /> $169.00 per night plus 15.5% tax ($195.20 per night)
                 </li>
-                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
-                <li><strong>Overnight Parking:</strong><br />$20.00 Overnight Parking plus tax per day with in and out access<br />$32.00 Valet Parking plus tax per day with in and out access</li>
-                <li><strong>Pet Policy:</strong><br />
-                Pets are allowed – Call for fee<br />
-Service Animals ARE allowed at no charge
+                <li>
+                  <strong>Reservations:</strong>
+                  <br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 5, 2023
+                  {/* <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-SALV" target="_blank">Book Reservation</a> */}
+                </li>
+                <li>
+                  <strong>Cancellation Policy:</strong>
+                  <br /> 48 Hours / 2 Days Prior to Arrival Date
+                </li>
+                <li>
+                  <strong>Overnight Parking:</strong>
+                  <br />
+                  $20.00 Overnight Parking plus tax per day with in and out
+                  access
+                  <br />
+                  $32.00 Valet Parking plus tax per day with in and out access
+                </li>
+                <li>
+                  <strong>Pet Policy:</strong>
+                  <br />
+                  Pets are allowed – Call for fee
+                  <br />
+                  Service Animals ARE allowed at no charge
                 </li>
               </ul>
             </div>
@@ -213,31 +364,78 @@ Service Animals ARE allowed at no charge
       </section>
       <footer className="footer">
         <div className="container">
-            <div id="df-footer-wrapper" className="df-footer-light lazy-wrapper full no-padding">
+          <div
+            id="df-footer-wrapper"
+            className="df-footer-light lazy-wrapper full no-padding"
+          >
             <div className="df-container-footer df-container-fluid">
-            <div>
-              <div className="df-footer-top">
-                <div className="col-lg-12 df-footer-2-inner">
-                  <span className="df-footer-logo">
-                    <img alt="Get Connected" data-src="https://salarmycentral.org/wp-content/uploads/shield.png" className="center-block df-footer-logo-img lazyloaded" src="https://salarmycentral.org/wp-content/uploads/shield.png" loading="lazy" /><noscript><img src="https://salarmycentral.org/wp-content/uploads/shield.png" className="center-block df-footer-logo-img" alt="Get Connected" /></noscript>
-                  </span>
-                  <div className="df-footer-description">
-                    <p><strong>The Salvation Army Mission Statement</strong></p>
+              <div>
+                <div className="df-footer-top">
+                  <div className="col-lg-12 df-footer-2-inner">
+                    <span className="df-footer-logo">
+                      <img
+                        alt="Get Connected"
+                        data-src="https://salarmycentral.org/wp-content/uploads/shield.png"
+                        className="center-block df-footer-logo-img lazyloaded"
+                        src="https://salarmycentral.org/wp-content/uploads/shield.png"
+                        loading="lazy"
+                      />
+                      <noscript>
+                        <img
+                          src="https://salarmycentral.org/wp-content/uploads/shield.png"
+                          className="center-block df-footer-logo-img"
+                          alt="Get Connected"
+                        />
+                      </noscript>
+                    </span>
+                    <div className="df-footer-description">
+                      <p>
+                        <strong>The Salvation Army Mission Statement</strong>
+                      </p>
 
-                    <p>The Salvation Army, an international movement, is an evangelical part of the universal Christian Church. Its message is based on the Bible. Its ministry is motivated by the love of God. Its mission is to preach the gospel of Jesus Christ and to meet human needs in His name without discrimination.</p>
+                      <p>
+                        The Salvation Army, an international movement, is an
+                        evangelical part of the universal Christian Church. Its
+                        message is based on the Bible. Its ministry is motivated
+                        by the love of God. Its mission is to preach the gospel
+                        of Jesus Christ and to meet human needs in His name
+                        without discrimination.
+                      </p>
 
-                    <p>The Salvation Army Central Territory Headquarters<br />
-                    Serving communities in Michigan, Wisconsin, Minnesota, North &amp; South Dakota, Nebraska, Kansas, Missouri, Illinois, Iowa and Indiana<br />
-                    5550 Prairie Stone Parkway, Hoffman Estates, IL 60192 | 1-800-SAL-ARMY | Privacy Policy | © The Salvation Army Central Territory<br />
-                    <a href="https://easternusa.salvationarmy.org/">Eastern Territory</a> | <a href="https://salvationarmysouth.org/">Southern Territory</a> | <a href="https://westernusa.salvationarmy.org/">Western Territory</a> | <a href="https://www.salvationarmy.org/ihq/">International Headquarters</a></p>
+                      <p>
+                        The Salvation Army Central Territory Headquarters
+                        <br />
+                        Serving communities in Michigan, Wisconsin, Minnesota,
+                        North &amp; South Dakota, Nebraska, Kansas, Missouri,
+                        Illinois, Iowa and Indiana
+                        <br />
+                        5550 Prairie Stone Parkway, Hoffman Estates, IL 60192 |
+                        1-800-SAL-ARMY | Privacy Policy | © The Salvation Army
+                        Central Territory
+                        <br />
+                        <a href="https://easternusa.salvationarmy.org/">
+                          Eastern Territory
+                        </a>{" "}
+                        |{" "}
+                        <a href="https://salvationarmysouth.org/">
+                          Southern Territory
+                        </a>{" "}
+                        |{" "}
+                        <a href="https://westernusa.salvationarmy.org/">
+                          Western Territory
+                        </a>{" "}
+                        |{" "}
+                        <a href="https://www.salvationarmy.org/ihq/">
+                          International Headquarters
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="df-container-subfooter df-container-fluid"></div>
           </div>
-          <div className="df-container-subfooter df-container-fluid">
-          </div>
-    </div>
         </div>
       </footer>
     </Layout>
