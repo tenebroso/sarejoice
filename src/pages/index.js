@@ -331,6 +331,7 @@ const IndexPage = () => {
                 <li>
                   <strong>Reservations:</strong>
                   <br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 5, 2023
+                  <br />
                   <a href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-place-milwaukee-downtown/mkezd?corp_id=G-FTSA">
                     Book Reservation
                   </a>
