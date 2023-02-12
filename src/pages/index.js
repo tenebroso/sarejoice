@@ -106,7 +106,10 @@ const IndexPage = () => {
               return (
                 <li key={idx} data-active={addAttr(item.dates)}>
                   <span className="time">{item.time}</span>
-                  <span className="title">{item.title}</span>
+                  <span
+                    className="title"
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  />
                   <span className="location">{item.location}</span>
                   {item.notes && (
                     <span

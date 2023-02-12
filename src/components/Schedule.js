@@ -45,6 +45,13 @@ export const schedule = {
       notes: "",
     },
     {
+      time: "2:00 P.M. - 7:30 P.M.",
+      title:
+        "Ride for the World 2023 Registration and <br />T-Shirt Distribution",
+      location: "Miller High Life Theatre, Box Office Lobby",
+      notes: "",
+    },
+    {
       time: "4:00 P.M. - 5:00 P.M.",
       title: "Candidates Meet and Greet+",
       location: "Hyatt Regency Milwaukee Hotel, Vue East Ballroom, 21st Floor",
@@ -101,6 +108,13 @@ export const schedule = {
       notes: "",
     },
     {
+      time: "9:00 A.M.",
+      title:
+        "Ride for the World 2023 Registration and <br />T-Shirt Distribution",
+      location: "Miller High Life Theatre, Box Office Lobby",
+      notes: "",
+    },
+    {
       time: "9:15 A.M. - 11:45 A.M.",
       title:
         "Child Care for Pre-Registered Children (ages 0-11 years)** Until End of Meeting",
@@ -121,6 +135,12 @@ export const schedule = {
       notes: "",
     },
     {
+      time: "1:00 P.M.",
+      title: "Ride for the World 2023",
+      location: "Front of Miller High Life Theatre",
+      notes: "",
+    },
+    {
       time: "4:15 P.M. - 6:30 P.M.",
       title: "Fellowship of the Silver Star Dinner+",
       location:
@@ -136,7 +156,7 @@ export const schedule = {
     {
       time: "6:45 P.M - 9:30 P.M.",
       title:
-        "Child Care for Pre-Registered Children (ages 0-11 years)** Until End of Meeting",
+        "Child Care for Pre-Registered Children <br />(ages 0-11 years)** Until End of Meeting",
       location:
         "Miller High Life Theatre - Kilbourn Hall / Kilbourn Hall East Rotunda, 1st Floor - Plankinton Hall, 2nd Floor",
       notes: "",
