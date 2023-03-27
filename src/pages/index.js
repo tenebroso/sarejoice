@@ -162,7 +162,7 @@ const IndexPage = () => {
               <h3 className="hotel-name">
                 <a
                   target="_blank"
-                  href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm"
+                  href="https://www.hyatt.com/en-US/group-booking/MKERM/G-SAVC"
                 >
                   Hyatt Regency Milwaukee
                 </a>
@@ -185,10 +185,11 @@ const IndexPage = () => {
                 <li>
                   <strong>Self-Parking:</strong>
                   <br />
-                  310 Parking Structure (Hyatt Regency's Preferred Parking
-                  Garage)
-                  <br />
-                  747 North Old World Third Street, Milwaukee, WI, 53203
+                  Interstate Parking Structure (adjacent to the Hyatt Recency Milwaukee Hotel)
+                  <br /><a href="https://goo.gl/maps/PfxKfWeYdAfZ65RL7" target="_blank">33 W. Wells St. Milwaukee, WI, 53203</a>
+                  <br /><br />Located adjacent to the Hotel to the West, attached on the 2nd floor via Skywalk.
+                  <br />For  most convenient access, park on level “W3”
+                  <br /><br />$28.00 per 24 hours with in and out access
                 </li>
                 <li>
                   <strong>Valet Parking:</strong>
