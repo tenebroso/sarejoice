@@ -64,6 +64,18 @@ export const schedule = {
       notes: "",
     },
     {
+      time: '7:00 P.M.',
+      title: 'Doors Open in the Main Theatre Seating Area',
+      location: "Miller High Life Theatre",
+      notes: '',
+    },
+    {
+      time: '7:00 P.M. - 7:15 P.M.',
+      title: 'Pack Drumline Performance / Concert',
+      location: "Miller High Life Theatre, Grand Rotunda",
+      notes: '',
+    },
+    {
       time: "7:00 P.M. - 9:45 P.M.",
       title:
         "Child Care Registration and Drop-Off for Pre-Registered Children**",
@@ -76,8 +88,8 @@ export const schedule = {
       `,
     },
     {
-      time: "7:30 P.M. - 9:30 P.M.",
-      title: "Opening Session - We will Rejoice in the City",
+      time: "7:30 P.M.",
+      title: "Opening Session – 'Rejoice in the City'",
       location: "Miller High Life Theatre",
       notes: "",
     },
@@ -123,8 +135,15 @@ export const schedule = {
       notes: "Lunch will not be provided",
     },
     {
+      time: "9:30 A.M.",
+      title:
+        "Doors Open in the Main Theatre Seating Area",
+      location: "Miller High Life Theatre",
+      notes: "",
+    },
+    {
       time: "10:00 A.M.",
-      title: "Morning Session - We will Rejoice across all Cultures",
+      title: "Morning Session - 'Rejoice and Celebrate God's Creativity'",
       location: "Miller High Life Theatre",
       notes: "",
     },
@@ -137,11 +156,17 @@ export const schedule = {
     {
       time: "1:00 P.M.",
       title: "Ride for the World 2023",
-      location: "Front of Miller High Life Theatre",
+      location: "TBD",
       notes: "",
     },
     {
-      time: "4:15 P.M. - 6:30 P.M.",
+      time: "1:30 P.M. – 2:00 P.M.",
+      title: "Central Territory Staff Songsters Concert",
+      location: "Trade Central (Wisconsin Center District, Ballroom A & Ballroom B Foyer), 1st Floor",
+      notes: "",
+    },
+    {
+      time: "4:30 P.M. - 6:30 P.M.",
       title: "Fellowship of the Silver Star Dinner+",
       location:
         "Hyatt Regency Milwaukee Hotel, Regency Ballroom, Rooms CD, 2nd Floor",
@@ -154,6 +179,14 @@ export const schedule = {
       notes: "",
     },
     {
+      time: "6:45 P.M - 7:45 P.M.",
+      title:
+        "Chilean Timbrel Performance",
+      location:
+        "Miller High Life Theatre, Grand Rotunda",
+      notes: "",
+    },
+    {
       time: "6:45 P.M - 9:30 P.M.",
       title:
         "Child Care for Pre-Registered Children <br />(ages 0-11 years)** Until End of Meeting",
@@ -162,9 +195,21 @@ export const schedule = {
       notes: "",
     },
     {
-      time: "7:30 P.M.",
-      title: "Evening Session - We will Rejoice with Creative Arts",
+      time: "7:00 P.M.",
+      title: "Doors Open in the Main Theatre Seating Area",
       location: "Miller High Life Theatre",
+      notes: "",
+    },
+    {
+      time: "7:30 P.M.",
+      title: "Evening Session - 'Rejoice & Be Glad'",
+      location: "Miller High Life Theatre",
+      notes: "",
+    },
+    {
+      time: "9:30 P.M.",
+      title: "Commissioners Bailey's Retirement Celebration Reception*",
+      location: "Miller High Life Theatre, Grand Rotunda",
       notes: "",
     },
   ],
@@ -184,9 +229,15 @@ export const schedule = {
       notes: "**THERE WILL BE NO AFTERNOON CHILD CARE**",
     },
     {
-      time: "9:00 A.M. - 11:30 A.M.",
+      time: "8:30 A.M.",
+      title: "Doors Open in the Main Theatre Seating Area",
+      location: "Miller High Life Theatre",
+      notes: "",
+    },
+    {
+      time: "9:00 A.M.",
       title:
-        "Commissioning and Ordination of the Reflectors of Holiness Session",
+        "Ordination and Commissioning of the Reflectors of Holiness Session",
       location: "Miller High Life Theatre",
       notes: "",
     },

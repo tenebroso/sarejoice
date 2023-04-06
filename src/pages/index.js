@@ -149,7 +149,9 @@ const IndexPage = () => {
                 loading="lazy"
               ></iframe>
               <p className="hotel-address">
-                <strong>Hyatt Regency Milwaukee</strong>
+                <strong>
+                  Hyatt Regency Milwaukee
+                  </strong>
                 <br />
                 333 W. Kilbourn Ave.
                 <br />
@@ -162,7 +164,7 @@ const IndexPage = () => {
               <h3 className="hotel-name">
                 <a
                   target="_blank"
-                  href="https://www.hyatt.com/en-US/group-booking/MKERM/G-SAVC"
+                  href="https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm"
                 >
                   Hyatt Regency Milwaukee
                 </a>
@@ -174,9 +176,9 @@ const IndexPage = () => {
                 </li>
                 <li>
                   <strong>Reservations:</strong>
-                  <br /> Hotel Room Block will be available to book in Spring
-                  2023
+                  <br /> Last day to make reservations is May 9, 2023
                   <br />
+                  <a href="https://www.hyatt.com/en-US/group-booking/MKERM/G-SAVC" target="blank">Book Reservation</a>
                 </li>
                 <li>
                   <strong>Cancellation Policy:</strong>
@@ -188,7 +190,7 @@ const IndexPage = () => {
                   Interstate Parking Structure (adjacent to the Hyatt Recency Milwaukee Hotel)
                   <br /><a href="https://goo.gl/maps/PfxKfWeYdAfZ65RL7" target="_blank">33 W. Wells St. Milwaukee, WI, 53203</a>
                   <br /><br />Located adjacent to the Hotel to the West, attached on the 2nd floor via Skywalk.
-                  <br />For  most convenient access, park on level “W3”
+                  <br />For most convenient access, park on level "W3"
                   <br /><br />$28.00 per 24 hours with in and out access
                 </li>
                 <li>
