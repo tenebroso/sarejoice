@@ -136,7 +136,7 @@ const IndexPage = () => {
           </p>
         </div>
       </section>
-      <section className="hotel-section" id="hotels">
+      {/* <section className="hotel-section" id="hotels">
         <div className="container">
           <h2 className="hotel-heading">Hotels</h2>
           <div className="hotel flex">
@@ -278,27 +278,6 @@ const IndexPage = () => {
               </ul>
             </div>
           </div>
-
-          {/* <div className="hotel flex">
-            <div className="hotel-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.1480228484083!2d-87.92161108473125!3d43.03831697914711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805199dc2abf0b9%3A0xfbda3ab46b835bd7!2s611%20W%20Wisconsin%20Ave%2C%20Milwaukee%2C%20WI%2053203!5e0!3m2!1sen!2sus!4v1645747283989!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-              <p className="hotel-address"><strong>DoubleTree by Hilton Milwaukee Downtown</strong><br />**LAST DAY TO MAKE RESERVATIONS IS THIS BLOCK IS MAY 10, 2023**<br />611 W. Wisconsin Ave.<br />Milwaukee, WI 53203<br />414-727-2274</p>
-            </div>
-            <div className="hotel-details">
-              <h3 className="hotel-name"><a target="_blank" href="https://www.hilton.com/en/hotels/mkeccdt-doubletree-milwaukee-downtown/?SEO_id=BING-DT-MKECCDT&y_source=1_MTM3MjU5MC00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D">DoubleTree by Hilton Milwaukee Downtown</a></h3>
-              <ul className="hotel-details-list">
-                <li><strong>Rates:</strong><br /> $169.00 per night plus 15.1% tax ($194.52 per night)</li>
-                <li><strong>Reservations:</strong><br /> BLOCK IS AVAILABLE TO BOOK UNTIL MAY 10, 2023 <a href="https://www.hilton.com/en/attend-my-event/mkeccdt-sal-7c7db3b8-7121-4693-9519-193731d2f054/" target="_blank">Book Reservation</a></li>
-                <li><strong>Cancellation Policy:</strong><br /> 48 Hours / 2 Days Prior to Arrival Date</li>
-                <li><strong>Overnight Parking:</strong><br />$23.00 Overnight Parking per day with in and out access</li>
-                <li><strong>Pet Policy:</strong><br />
-                   Not allowed<br />
-                  Service Animals ARE allowed
-                </li>
-              </ul>
-            </div>
-          </div> */}
-
           <div className="hotel flex">
             <div className="hotel-map">
               <iframe
@@ -367,7 +346,7 @@ const IndexPage = () => {
 
           <p>Parking Fees and Wisconsin State Taxes are Subject to Change</p>
         </div>
-      </section>
+      </section> */}
       <footer className="footer">
         <div className="container">
           <div
