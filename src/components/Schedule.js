@@ -153,16 +153,17 @@ export const schedule = {
       location: "Wisconsin Center, Ballrooms A & B, 1st Floor",
       notes: "",
     },
-    {
-      time: "1:00 P.M.",
-      title: "Ride for the World 2023",
-      location: "TBD",
-      notes: "",
-    },
+   
     {
       time: "1:30 P.M. – 2:00 P.M.",
       title: "Central Territory Staff Songsters Concert",
       location: "Trade Central (Wisconsin Center District, Ballroom A & Ballroom B Foyer), 1st Floor",
+      notes: "",
+    },
+    {
+      time: "2:00 P.M. - 4:00 P.M.",
+      title: "Ride for the World 2023",
+      location: "Hyatt Regency Milwaukee, 3rd Street Starbucks Entrance",
       notes: "",
     },
     {
@@ -242,20 +243,20 @@ export const schedule = {
       notes: "",
     },
     {
-      time: "11:30 A.M. - 1:00 P.M.",
+      time: "12:00 P.M. - 1:30 P.M.",
       title: "Lunch Break",
       location: "",
       notes: "",
     },
     {
-      time: "1:00 P.M. - 3:00 P.M.",
+      time: "1:30 P.M. - 3:30 P.M.",
       title:
         "Parade of Flags followed by the Service of Appointments for the Reflectors of Holiness Session",
       location: "Miller High Life Theatre",
       notes: "",
     },
     {
-      time: "3:00 P.M. - 4:00 P.M.",
+      time: "3:30 P.M. - 4:30 P.M.",
       title: "Reception for the New Lieutenants & Unit Commanders+",
       location:
         "Miller High Life Theatre, Kilbourn Hall East Rotunda, 1st Floor",
